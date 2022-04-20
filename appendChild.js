@@ -10,3 +10,17 @@ let list = document.createElement('li');
 
 // document.getElementById('parent').childNodes
 // document.getElementById('parent').parentNode
+
+
+// let coloring = document.querySelector('ul li a')
+// coloring.style.color='green';
+
+// let colors = document.querySelector('ul li a span')
+// colors.style.color='red';
+
+let colorAll = document.querySelectorAll('ul li a');
+for (let i = 0; i < colorAll.length; i++) {
+    const element = colorAll[i];
+    element.style.color = 'green';
+}
+// colorAll.style.color = 'red';
