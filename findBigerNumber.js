@@ -4,10 +4,13 @@ let c = 101;
 
 if(a > b){
     if(a > c){
-        console.log('a is bigger then all');
+        console.log('(a = ' + a +') is bigger then all');
     }else{
-        console.log("c is biger then all")
+        console.log('(c = ' + c +') is bigger then all')
     }
 }else if(b > c){
-    console.log('b is bigger then all');
+    console.log('(b = ' + b +') is bigger then all');
 }
+
+let bigNumber = Math.max(a,b,c);
+console.log(bigNumber);
