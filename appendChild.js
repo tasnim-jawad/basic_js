@@ -6,6 +6,7 @@ let newHeading =document.getElementById('fist-heading');
 let parents = document.getElementById('parent');
 let list = document.createElement('li');
     list.innerHTML ='first time creat element';
+    list.setAttribute('class','last-childe');
     parents.appendChild(list);
 
 // document.getElementById('parent').childNodes
