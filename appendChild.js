@@ -7,7 +7,22 @@ let parents = document.getElementById('parent');
 let list = document.createElement('li');
     list.innerHTML ='first time creat element';
     list.setAttribute('class','last-childe');
+    list.style.backgroundColor = 'green';
     parents.appendChild(list);
+
+    let parentss = document.getElementById('parent');
+    let lists = document.createElement('li');
+        lists.innerHTML ='secend time creat element';
+        lists.setAttribute('class','last-childe');
+        lists.style.backgroundColor = 'tomato';
+        parentss.appendChild(lists);
+
+
+ let getClass = document.getElementsByClassName('last-childe');
+ for(let i = 0; i < getClass.length; i++){
+     let item =getClass[i];
+     item.style.backgroundColor = 'yellow';
+ }       
 
 // document.getElementById('parent').childNodes
 // document.getElementById('parent').parentNode
