@@ -17,21 +17,25 @@ getData = getResource => {
   }
 }
 
+document.getElementById('submit').addEventListener('click',() =>{
+  let title =document.getElementById('title').value
+  let postInfo =document.getElementById('postInfo').value
+  let post = {
+    title:title,
+    postInfo:postInfo
+  }
+  posts(post)
+})
 
-// fetch('https://jsonplaceholder.typicode.com/posts', {
-//   method: 'POST',
-//   body: JSON.stringify({
-//     title: 'foo',
-//     body: 'bar',
-//     userId: 1,
-//   }),
-//   headers: {
-//     'Content-type': 'application/json; charset=UTF-8',
-//   },
-// })
-//   .then((response) => response.json())
-//   .then(data => creatingData(data));
+posts = post =>{
+  fetch('https://jsonplaceholder.typicode.com/posts', {
+  method: 'POST',
+  body: JSON.stringify(post),
+  headers: {
+    'Content-type': 'application/json; charset=UTF-8',
+  },
+})
+  .then((response) => response.json())
+  .then(data => console.log(data));
 
-// creatingData = data =>{
-
-// }
+}
